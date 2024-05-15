@@ -1,0 +1,71 @@
+---
+import '../style/global.css'
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+---
+
+<section class=" text-black py-64">
+    <div class="container mx-auto flex flex-col items-center justify-center">
+      <h1 class="text-4xl font-bold">Sustainability</h1>
+      <p class="mt-6 text-lg">Revolutionizing Traceability Solutions for Your Brand</p>
+     <a href="#learnmore"><Button className='bg-primarylogoColor mt-6 '>Learn More</Button></a>
+    </div>
+  </section>
+
+  <section class="container mx-auto flex flex-col items-center justify-center">
+    <p class="text-primarylogoColor font-bold pb-2"> SERVICE</p>
+    <h1 class="text-4xl font-bold pb-4">Key Supply Chain Soultions</h1>
+    <container class="grid grid-cols-1 lg:grid-cols-3 gap-4 py-10">
+      <div class="pr-6">
+        <Card className='rounded-br-[50px] border-t-8 border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md w-[270px] h-[320px]'>
+        <CardHeader>
+          <CardTitle className='text-primary'>Foot Security</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Card Content</p>
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+      </Card>
+    </div>
+      <div class="pr-6">
+        <Card className='bg-footercolor rounded-br-[50px] border-t-8 border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md shadow-gray-200 text-white w-[270px] h-[320px]'>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <CardDescription>Card Description</CardDescription>
+  
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+      </Card></div>
+      <div class="pr-6 ">
+        <Card className='border-t-8 rounded-br-[50px] border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md shadow-gray-200 w-[270px] h-[320px]'>
+        <CardHeader>
+          <CardTitle className='text-primary'>Foot Security</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Card Content</p>
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+      </Card>
+    </div>
+    </container>
+  </section>
+
+  
