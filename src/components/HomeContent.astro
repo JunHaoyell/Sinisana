@@ -9,6 +9,33 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+import {Accordion} from "@/components/ui/Accordon"
+import InteractiveCarousel from '@/components/ui/InteractiveCarousel'
+const accordionData = [
+	{
+		title: "DEDICATED TEAMS",
+		description: "Risus viverra adipiscing at in tellus integer feugiat. Aenean et tortor at risus viverra.",
+	},
+	{
+		title: "CERTIFIED PROFESSIONAL",
+		description:
+			"Risus viverra adipiscing at in tellus integer feugiat. Aenean et tortor at risus viverra",
+	},
+	{
+		title: "24/7 SUPPORT TEAM",
+		description:
+			"Risus viverra adipiscing at in tellus integer feugiat. Aenean et tortor at risus viverra",
+	},
+];
 ---
 
 <section class=" text-black py-64">
@@ -19,53 +46,72 @@ import {
     </div>
   </section>
 
-  <section class="container mx-auto flex flex-col items-center justify-center">
+  <section id="learnmore" class="container mx-auto flex flex-col items-center justify-center">
     <p class="text-primarylogoColor font-bold pb-2"> SERVICE</p>
     <h1 class="text-4xl font-bold pb-4">Key Supply Chain Soultions</h1>
     <container class="grid grid-cols-1 lg:grid-cols-3 gap-4 py-10">
       <div class="pr-6">
         <Card className='rounded-br-[50px] border-t-8 border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md w-[270px] h-[320px]'>
-        <CardHeader>
-          <CardTitle className='text-primary'>Foot Security</CardTitle>
-          <CardDescription>Card Description</CardDescription>
+        <CardHeader className='px-8 pt-16'>
+          <CardTitle className='text-primary text-lg font-semibold'>Foot Security</CardTitle>
         </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
+        <CardContent className='px-8 pt-2'>
+          <CardDescription>Posuere morbi leo urna molestie at elementum eu egestas.</CardDescription>
         </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
+        <CardFooter className='px-8 pt-3'>
+          <a href="/learnmore" class="hover:underline underline-offset-4"><CardTitle className='text-primary text-md font-medium'>LEARN MORE &gt; </CardTitle></a>
         </CardFooter>
       </Card>
     </div>
       <div class="pr-6">
-        <Card className='bg-footercolor rounded-br-[50px] border-t-8 border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md shadow-gray-200 text-white w-[270px] h-[320px]'>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <CardDescription>Card Description</CardDescription>
-  
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
+        <Card className='bg-footercolor  rounded-br-[50px] border-t-8 border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md shadow-gray-200 text-white w-[270px] h-[320px]'>
+          <CardHeader className='px-8 pt-16'>
+            <CardTitle className='text-primary text-white text-lg font-semibold'>Compliance</CardTitle>
+          </CardHeader>
+          <CardContent className='px-8 pt-2'>
+            <CardDescription className='text-white'>Posuere morbi leo urna molestie at elementum eu egestas.</CardDescription>
+          </CardContent>
+          <CardFooter className='px-8 pt-3'>
+            <a href="/learnmore" class="hover:underline  underline-offset-4"><CardTitle className='text-primary text-white text-md font-medium'>LEARN MORE &gt; </CardTitle></a>
+          </CardFooter>
       </Card></div>
       <div class="pr-6 ">
         <Card className='border-t-8 rounded-br-[50px] border-t-footercolor border-l-0 border-r-0 border-b-0 shadow-md shadow-gray-200 w-[270px] h-[320px]'>
-        <CardHeader>
-          <CardTitle className='text-primary'>Foot Security</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
+          <CardHeader className='px-8 pt-16'>
+            <CardTitle className='text-primary text-lg font-semibold'>Circular Economy</CardTitle>
+          </CardHeader>
+          <CardContent className='px-8 pt-2'>
+            <CardDescription>Posuere morbi leo urna molestie at elementum eu egestas.</CardDescription>
+          </CardContent>
+          <CardFooter className='px-8 pt-3'>
+            <a href="/learnmore" class="hover:underline underline-offset-4"><CardTitle className='text-primary text-md font-medium'>LEARN MORE &gt; </CardTitle></a>
+          </CardFooter>
       </Card>
     </div>
     </container>
+  </section>
+
+  <section class="container flex flex-col items-center justify-center lg:mt-10 lg:mb-10">
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">
+      <div class="col-span-1 lg:w-[535px] lg:h-[417px] w-[100%]"> <!-- First column, widest -->
+        <p class="text-primarylogoColor font-bold pb-2"> WHY US</p>
+        <h1 class="text-4xl font-bold">We have over 25+ years in the Tech Industry</h1>
+        <p class="pr-28 mt-6">Quis eleifend quam adipiscing vitae proin sagittis nisl. Lectus vestibulum mattis.</p>
+        <Accordion data={accordionData} client:idle />
+      </div>
+      <div class="col-span-1 w-[175px] h-[417px] "> <!-- Second column, narrowest -->
+          <img src="/images/benefit1.svg" class="lg:w-[175px] w-[100px] h-auto lg:h-[417px] lg:ml-64  " />
+      </div>
+      <div class="col-span-1 w-[278px] h-[417px] lg:mt-0 mt-[-435px] lg:ml-0 ml-40"> <!-- Third column, wider than the second -->
+        <img src="/images/benefit2.svg"  class="lg:w-[278px] w-[200px] h-[250px] lg:h-[417px] lg:ml-10"/>
+      </div>
+  </div>
+  </section>
+
+  <section class="container mx-auto flex flex-col items-center justify-center lg:mt-20 mt-[-150px] lg:mb-20" >
+    <p class="text-primarylogoColor font-bold pb-2"> TESTIMONIALS</p>
+    <h1 class="text-4xl font-bold pb-16">Our successful clients</h1>
+    <InteractiveCarousel client:load />
   </section>
 
   

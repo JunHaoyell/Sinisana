@@ -20,6 +20,7 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         primarylogoColor: "#9F1C2D",
         footercolor: "#002B5B",
+        cardbg: "#F0F0F0",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
