@@ -86,7 +86,7 @@ const InteractiveCarousel = () => {
       opts={{
         align: "start",
       }}
-      className=" max-w-sm lg:max-w-[1140px] md:max-w-[800px] lg:ml-0 md:ml-0 ml-16"
+      className=" max-w-sm lg:max-w-[1140px] md:max-w-[800px] lg:ml-0 md:ml-0 ml-10"
     >
       <CarouselContent>
         {cardTestimonial.map((item, index) => (
@@ -116,6 +116,8 @@ const InteractiveCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
+      <CarouselPrevious className="lg:hidden md:hidden ml-14 mt-14 " />
+      <CarouselNext className="lg:hidden md:hidden mr-14 mt-14" />
     </Carousel>
   );
 };
