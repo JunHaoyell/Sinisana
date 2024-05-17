@@ -6,4 +6,15 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind({ applyBaseStyles: false })],
+  vite: {
+    resolve: {
+      alias: {
+        "@components": "/src/components",
+        "@components/*": "src/components/*",
+        "@layouts/*": "src/layouts/*",
+        "@lib/*": "src/lib/*",
+        "@pages/*": "src/pages/*",
+      },
+    },
+  },
 });
