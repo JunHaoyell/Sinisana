@@ -10,14 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
 import {Accordion} from "@/components/ui/Accordon"
 import InteractiveCarousel from '@/components/ui/InteractiveCarousel'
 const accordionData = [
@@ -55,7 +47,7 @@ const accordionData = [
         <CardHeader className='px-8 pt-16'>
           <CardTitle className='text-primary text-lg font-semibold'>Foot Security</CardTitle>
         </CardHeader>
-        <CardContent className='px-8 pt-2'>
+        <CardContent className='px-8 pt-2 self-center'>
           <CardDescription>Posuere morbi leo urna molestie at elementum eu egestas.</CardDescription>
         </CardContent>
         <CardFooter className='px-8 pt-3'>
@@ -111,7 +103,7 @@ const accordionData = [
   <section class="container mx-auto flex flex-col items-center justify-center lg:mt-20 mt-[-150px] lg:mb-20" >
     <p class="text-primarylogoColor font-bold pb-2"> TESTIMONIALS</p>
     <h1 class="text-4xl font-bold pb-16">Our successful clients</h1>
-    <InteractiveCarousel client:load />
+    <InteractiveCarousel client:load/>
   </section>
 
   

@@ -5,12 +5,13 @@ import Header from '../components/Header.astro';
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" >
         <title>SINISANA</title>
         <link rel="stylesheet" href="/dist/output.css">
     </head>
     <body>
-        <Header />
+        <Header client:load/>
         <slot />
-        <Footer />
+        <Footer client:load/>
     </body>
 </html>
