@@ -1,0 +1,183 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@components/ui/card";
+import { Button } from "@components/ui/button";
+import Partner from "@components/Partner.astro"
+const Advisors = [
+  {
+    name: "Richard Upperton",
+    profile: "/images/advisor-RU.svg",
+    role: "Member of Board of Trustees",
+    intro: "Passionate about improving businesses whilst taking care of the environment.",
+    linedin: "",
+    email: "",
+  },
+  {
+    name: "Daphne Lim",
+    profile: "/images/advisor-DL.svg",
+    role: "Content Producer",
+    intro: "Passion for experiential digital marketing and developing cross-cultural teams.",
+    linedin: "",
+    email: "",
+  },
+  {
+    name: "Danny Leong",
+    profile:"/images/advisor-DLe.svg",
+    role: "Founder of MoonStone Advisers & Ventures",
+    intro: "Deep experience in scaling regional businesses",
+    linedin: "",
+    email: "",
+  },
+  {
+    name: "James Kairos",
+    profile:"/images/advisor-KL.svg",
+    role: "Co-Founder & Ex-COO of JYVE",
+    intro: "Deeply experienced in building tech partnerships and growing revenue.",
+    linedin: "",
+    email: "",
+  },
+  
+
+]
+
+---
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grids-cols-2 lg:h-[691px] w-full md:w-full lg:w-full gap-4 items-center justify-center lg:px-14 px-3 py-3 ml-3 md:ml-0 md:px-6">
+    <div class="lg:w-auto md:w-[520px] w-full items-center">
+        <h1 class=" lg:text-6xl md:text-4xl text-2xl font-bold mb-4">Sinisana’s Story</h1>
+      <img src="/images/leave.svg" alt="story Image" class="lg:w-[520px] md:w-[350px] w-[400px] lg:h-[373px] "/>
+    </div>
+    <div class="lg:w-[426px] md:w-auto w-[400px] lg:ml-5 ">
+      <h2 class="lg:text-3xl md:text-2xl text-xl font-bold mb-5 ">About Us</h2>
+      <p class="text-gray-700 text-base font-semibold">Sinisana Technologies began operations in 2019 to help brands out-compete their competitors by giving consumers a behind-the-scenes look at the story of the products they are purchasing. By combining multiple data streams throughout the supply chain, brands can back up their claims with real-world data to strengthen their brand equity and build long-term consumer loyalty.</p>
+    </div>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grids-cols-2 lg:h-[300px] w-full md:w-full lg:w-full gap-4 items-center justify-center lg:px-14 px-3 ml-3 md:ml-0 md:px-6" >
+    <div class="lg:w-auto md:w-full w-full items-center">
+        <h1 class=" lg:text-4xl md:text-4xl text-2xl text-center font-bold mb-4">Meet With Our Co-founders</h1>
+    </div>
+    <div class="lg:w-[426px] md:w-auto w-[400px] lg:ml-5 ">
+      <img src="/images/founders.png" class="lg:scale-125"/>
+    </div>
+</section>
+
+<section>
+    <div class="flex items-center justify-center space-x-4 mt-28 lg:ml-0 md:ml-0 ml-6  w-[400px] lg:w-full md:w-full">
+        <div class="h-1 w-20 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-r"></div>
+        <h2 class="text-center lg:text-3xl md:text-2xl font-bold">Mission, Vision, and Core Values</h2>
+        <div class="h-1 w-20 bg-gradient-to-r from-transparent via-blue-500 to-transparent rotate-180"></div>
+      </div>
+    
+      <div class="item-center justify-center lg:px-20 md:px-20 px-4 lg:w-full md:w-full w-[400px] lg:ml-0 md:ml-0 ml-5 py-10">
+        <p class="text-center text-base font-semibold lg:px-80">Sinisana Technologies aims to revolutionize supply chains with transparent, sustainable solutions. Guided by integrity, innovation, and sustainability, we foster trust and accountability in every collaboration.</p>
+      </div>
+</section>
+
+<div class="flex items-center justify-center h-auto lg:py-10 md:py-10 px-7 pb-10">
+    <section class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4 lg:ml-0 ml-5">
+      <div class="col-span-1 flex justify-center items-center lg:mx-2 mx-auto">
+        <Card className='lg:w-[340px] w-[340px] md:w-[200px] shadow-lg flex flex-col items-center lg:h-[439px] h-[420px] md:h-[410px] justify-center '>
+          <img src="/images/futureplan.svg" class="lg:w-[339.87px] lg:h-[181px]" />
+          <img src="/missionLogo.svg" class="self-center mt-[-50px]" />
+          <h1 class="lg:text-3xl md:text-xl text-xl font-semibold">Future Plans</h1>
+          <p class="text-center lg:text-sm text-xs font-medium md:text-xs px-8 py-5">We plan to develop tailored solutions for various industries, including agriculture, pharmaceuticals, electronics, and more, to address unique supply chain challenges.</p>
+          <Button className="w-[125px] h-[36px] bg-primarylogoColor mb-5">
+            Learn More
+          </Button>
+        </Card>
+      </div>
+      <div class="col-span-1 flex justify-center mx-auto lg:mx-2 ">
+        <Card className='lg:w-[340px] w-[340px] md:w-[200px] shadow-lg flex flex-col items-center h-[420px] lg:h-[439px] md:h-[410px] justify-center'>
+            <img src="/images/ourvalue.svg" class="w-[339.87px] h-[181px] md:h-[220px]" />
+            <img src="/missionLogo.svg" class="self-center mt-[-50px]" />
+            <h1 class="lg:text-3xl md:text-xl text-xl font-semibold">Our Values</h1>
+            <p class="text-center lg:text-sm text-xs md:text-xs  font-medium  px-8 py-5">We prioritize sustainable practices and help our clients achieve their environmental and social goals through responsible supply chain management.</p>
+            <Button className="w-[125px] h-[36px] bg-primarylogoColor mb-5">
+              Learn More
+            </Button>
+          </Card>
+      </div>
+      <div class="col-span-1 flex justify-center mx-auto lg:mx-2">
+        <Card className='lg:w-[340px] w-[340px] md:w-[200px] shadow-lg flex flex-col items-center h-[420px] lg:h-[439px] md:h-[410px] justify-center'>
+            <img src="/images/ourmission.svg" class="w-[339.87px] h-[181px]" />
+            <img src="/missionLogo.svg" class="self-center mt-[-50px]" />
+            <h1 class="lg:text-3xl md:text-xl text-xl font-semibold">Our Missions</h1>
+            <p class="text-center lg:text-sm md:text-xs text-xs font-medium px-8 py-5">To revolutionize supply chains by providing innovative, data-driven solutions that ensure transparency, sustainability, and efficiency from production to delivery.</p>
+            <Button className="w-[125px] h-[36px] bg-primarylogoColor mb-5">
+              Learn More
+            </Button>
+          </Card>
+      </div>
+    </section>
+  </div>
+
+
+  
+
+  <section>
+    <div class="flex items-center justify-center space-x-4 mt-10 lg:ml-0 md:ml-0 ml-6  w-full  lg:w-full md:w-full">
+        <h2 class="text-center lg:text-3xl md:text-2xl font-bold"> Awards & Recognition</h2>
+        
+      </div>
+    
+      <div class="item-center justify-center lg:px-20 md:px-20 px-4 lg:w-full md:w-full w-[400px] lg:ml-0 md:ml-0 ml-5 py-10">
+        <p class="text-center text-base font-semibold lg:px-80">We are pleased to share some of the honors and awards that our organization has recevied.</p>
+      </div>
+      <div class="relative flex items-center lg:w-full md:w-full w-[430px] ml-3 md:ml-0 lg:ml-0 justify-center mx-auto h-[387px] lg:bg-cover lg:bg-center " style="background-image: url('/images/award.svg');">
+
+        <div class="relative z-10 lg:px-40 px-0 lg:pl-[700px] text-white lg:p-6 rounded-lg lg:bg-opacity-0 md:bg-opacity-45 bg-black bg-opacity-55 md:p-20 p-10 ">
+          <div class="flex felx-row px-8 lg:px-0">
+            <div class="col-span-1 lg:w-52 md:w-48 w-32 p-1"><img src="/awardsemicolum.svg" /></div>
+            <div class="ml-5">
+              <h1 class="lg:text-4xl md:text-xl font-bold mb-4">Award-Winning Environmental Sustainability</h1>
+            <h1 class="lg:text-lg md:text-lg text-sm px-5">“We're proud to announce our collaboration with Origo Eco for the world's first blockchain-traceable sustainable pallet, which won the Environmental Sustainability Digital Economy Award at WCIT | IDECS 2023.”</h1>
+            <div class="mt-5">
+              <a href="https://www.linkedin.com/company/sinisana/" class="hover:underline underline-offset-8 mt-20">
+                Sinisana Technologies, </a>
+             <a href="https://www.linkedin.com/company/origoeco/" class="hover:underline underline-offset-8">Origo Eco</a>
+            </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+</section>
+  
+<section class="my-10">
+  <div class="flex flex-col items-center justify-center h-auto lg:py-10 md:py-10 px-7 pb-10">
+    <h1 class="lg:text-3xl md:text-xl px-3 text-xl font-bold mb-10">Our Advisors</h1>
+    <section class="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-4 gap-4 lg:ml-0 ml-5">
+      
+      {Advisors.map((advisor) => (
+        <div class="col-span-1 flex justify-center items-center lg:mx-2 mx-auto">
+          <Card className='lg:w-[280px] w-[340px] md:w-[200px] flex flex-col items-center lg:h-[420px] h-[420px] md:h-[410px] justify-center border-2 border-[#DCDCDC] '>
+            <img src={advisor.profile} alt={advisor.name} class="lg:w-[182.27px] lg:h-[197.27px]" />
+            <h1 class="lg:text-xl md:text-xl px-3 text-xl font-semibold ">{advisor.name}</h1>
+            <h2 class="lg:text-base md:text-base  text-center text-lg font-normal">{advisor.role}</h2>
+            <p class="text-center lg:text-xs text-xs font-normal md:text-xs px-4 py-5">{advisor.intro}</p>
+            <div class="flex space-x-4 ">
+                <a href={advisor.linedin} class="hover:underline">
+                  <img src="/linkedinIcon.svg" />
+                </a>
+                <a href={`mailto:${advisor.email}`} class="hover:underline">
+                  <img src="/emailIcon.svg" />
+                </a>
+              
+            </div>
+          </Card>
+        </div>
+      ))}
+    </section>
+  </div>
+</section>
+<section class="relative flex flex-col items-center justify-center mx-auto lg:w-full md:w-full w-[460px] ml-1 my-10  bg-cover bg-center ">
+<Partner />
+</section>
