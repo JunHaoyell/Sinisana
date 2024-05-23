@@ -158,10 +158,10 @@ const Advisors = [
       
       {Advisors.map((advisor) => (
         <div class="col-span-1 flex justify-center items-center lg:mx-2 mx-auto">
-          <Card className='lg:w-[280px] w-[340px] md:w-[200px] flex flex-col items-center lg:h-[420px] h-[420px] md:h-[410px] justify-center border-2 border-[#DCDCDC] '>
+          <Card className='lg:w-[280px] w-[340px] md:w-[170px] md:mr-2 flex flex-col items-center lg:h-[420px] h-[420px] md:h-[410px] justify-center border-2 border-[#DCDCDC] '>
             <img src={advisor.profile} alt={advisor.name} class="lg:w-[182.27px] lg:h-[197.27px]" />
-            <h1 class="lg:text-xl md:text-xl px-3 text-xl font-semibold ">{advisor.name}</h1>
-            <h2 class="lg:text-base md:text-base  text-center text-lg font-normal">{advisor.role}</h2>
+            <h1 class="lg:text-xl md:text-lg lg:px-3 px-3 md:px-0 text-xl font-semibold ">{advisor.name}</h1>
+            <h2 class="lg:text-base md:text-sm  text-center text-lg font-normal">{advisor.role}</h2>
             <p class="text-center lg:text-xs text-xs font-normal md:text-xs px-4 py-5">{advisor.intro}</p>
             <div class="flex space-x-4 ">
                 <a href={advisor.linedin} class="hover:underline">

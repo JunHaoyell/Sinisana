@@ -12,6 +12,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        "ipad-pro": { raw: "(min-width: 834px) and (max-width: 1366px)" },
+      },
       fontFamily: {},
       colors: {
         border: "hsl(var(--border))",

@@ -1,24 +1,101 @@
 ---
+import { Button } from "./ui/button";
+import ClientTestimonial from "@components/ClientTestimonial.astro"
+
+const solutionBlock = [
+  {
+    icon:"/foodSecurityIcon.svg",
+    name : "Food Security",
+    link: "#foodsecurity"
+  },
+  {
+    icon:"/esgComplianceIcon.svg",
+    name : "ESG Compliance",
+    link: "#esg-compliance"
+  },
+  {
+    icon:"/lifecycleTrackingIcon.svg",
+    name : "Lifecycle Tracking",
+    link: "#life-cycle-tracking",
+  },
+  {
+    icon:"/halaBeefIcon.svg",
+    name : "Halal Beef",
+    link: "#halal-beef"
+  },
+]
 
 ---
 
-<section class="relative text-black py-64 mb-10 items-center justify-center w-[430px] h-full lg:w-full md:w-full md:h-full">
-    <div class="absolute inset-0 overflow-hidden flex items-center w-[460px] px-2 h-full lg:w-full md:w-full md:h-full justify-center">
+<section class="relative text-black lg:py-40 md:py-60 py-20 mb-10 items-center justify-center w-[430px] h-full lg:w-full md:w-full md:h-full">    
+  <div class="absolute inset-0 overflow-hidden flex items-center w-[460px] px-2 h-full lg:w-full md:w-full md:h-full justify-center">
       <img
-        class="w-[480px] h-full lg:w-full md:w-full md:h-full object-cover self-center"
-        src="/images/home-hero-bgimg.svg"
+        class="w-[480px] h-full lg:w-full md:w-full md:h-full object-cover self-center opacity-85"
+        src="/images/solution-hero-section-bgimg.svg"
       />
-      <div class="absolute inset-0 bg-black opacity-30"></div> <!-- Adds a dark overlay for better text visibility -->
+      <div class="absolute inset-0 bg-black opacity-0"></div> <!-- Adds a dark overlay for better text visibility -->
     </div>
     <div class="relative container mx-auto flex flex-col items-center justify-center w-full lg:w-full md:w-full">
-      <h1 class="text-5xl font-bold text-white lg:px-96 self-center justify-center lg:mb-7 md:mb-7">Ensuring <span>Sustainability</span></h1>
-      <h1 class="text-5xl font-bold text-white lg:px-96 self-center justify-center lg:mb-7 md:mb-7">
-          in Your Supply Chain</h1>
-      <p class="mt-6 text-lg text-white lg:mb-7 md:mb-7">
-        Leveraging Blockchain Technology for Food Security, Compliance, and Sustainability
-      </p>
-      <a href="#learnmore">
-        <button class="bg-primarylogoColor mt-6 text-white py-2 px-4 rounded">Learn More</button>
+      <h1 class="lg:text-6xl md:text-5xl text-4xl font-bold text-black text-center self-center justify-center lg:mb-7 md:mb-7">Our Solutions</h1>
+      <p class="mt-6 lg:text-3xl md:text-xl text-base lg:px-32 font-normal text-black lg:mb-7 md:px-20 md:mb-7 text-center">
+        Explore our comprehensive solutions designed to enhance transparency, sustainability, and efficiency across your supply chain.      </p>
+      <a href="#case-study">
+        <Button className="bg-primarylogoColor mt-6 text-white py-2 px-4 rounded">Explore More</Button>
       </a>
     </div>
+    <div class="ml-4 lg:ml-0 md:ml-0 ipad-pro:ml-0 absolute lg:bottom-[-40px] md:bottom-[-20px] ipad-pro:bottom-[-40px] bottom-[-20px] left-0 right-0 items-center flex justify-center space-x-1 lg:space-x-5 md:space-x-4 ">
+      
+      {solutionBlock.map((block)=>(
+      <a href={block.link}>
+        <Button className="lg:w-72 md:w-44  ipad-pro:w-52 md:h-[80px] lg:h-[90px] lg:px-10 w-24 self-center shadow-slate-400 lg:space-x-2 md:space-x-2 ipad-pro:space-x-2 space-x-0 bg-white text-black rounded-none border shadow-md  hover:text-black hover:bg-white hover:scale-105">
+         <img src={block.icon} class="ipad-pro:w-24 lg:w-14 w-3 md:w-5" />
+         <h1 class="lg:text-xl ipad-pro:text-base md:text-base text-[10px]  ">
+         {block.name}
+          </h1>
+        </Button>
+      </a>
+        
+        
+      ))
+  
+      }
+      </div>
   </section>
+
+  
+
+  <section id="case-study" class="justify-center  items-center flex flex-col">
+    
+    
+      <div class="flex items-center justify-center space-x-4 mt-10 lg:mt-20 lg:ml-0 md:ml-0 ml-6  w-[430px] lg:w-full md:w-full">
+          <div class="h-1 w-20 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-r"></div>
+          <h2 class="text-center lg:text-4xl md:text-2xl font-bold">CASE STUDIES</h2>
+          <div class="h-1 w-20 bg-gradient-to-r from-transparent via-blue-500 to-transparent rotate-180"></div>
+        </div>
+      
+        <div class="item-center justify-center lg:px-20 md:px-20 px-4 lg:w-full md:w-full w-[400px] lg:ml-0 md:ml-0 ml-5 py-10">
+          <p class="text-center text-base lg:text-2xl font-normal lg:px-14">
+            9 in 10 consumers globally rate ingredient traceability as important or very important. It has become a key non-price purchase trigger that every brand must embrace. Learn more from our case studies showcasing how we are helping organizations meet this growing demand.
+          </p>
+        </div>
+
+        <section class="flex flex-col md:flex-row items-center p-8 lg:px-36 bg-light">
+          <div class="md:w-1/2 lg:w-1/3 ipad-pro:w-1/2 md:pr-8">
+            <h2 class="text-2xl lg:text-4xl  font-bold mb-4">Ensuring Food Safety and Quality</h2>
+            <p class="text-base lg:text-xl font-normal">At Sinisana Technologies, we understand the critical importance of maintaining food security in today's global supply chains. Our advanced solutions are designed to monitor and safeguard food quality from production to consumption.</p>
+          </div>
+          <div class="md:w-1/2 lg:w-2/3 ipad-pro:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mt-8  md:mt-0">
+            <div class="flex-1">
+              <img src="/images/inspectingfood.svg" alt="Inspecting food" class="relative w-full lg:w-96 h-auto md:ml-24 lg:ml-24 lg:mt-14 md:mt-10 mt-0 object-cover rounded-md shadow-md">
+            </div>
+            <div class="flex-1">
+              <img src="/images/farm.svg" alt="Farm" class="w-full lg:w-[500px] h-auto object-cover rounded-md shadow-md">
+            </div>
+          </div>
+        </section>
+
+
+
+  </section>
+
+  <ClientTestimonial />
