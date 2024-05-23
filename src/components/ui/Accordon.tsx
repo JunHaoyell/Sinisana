@@ -42,7 +42,7 @@ export function Accordion({ data }: Props) {
                 {item.title}
               </span>
             </AccordionTrigger>
-            <AccordionContent className="ml-7">
+            <AccordionContent className="ml-0 lg:ml-7 md:ml-7">
               {item.description}
             </AccordionContent>
           </AccordionItem>

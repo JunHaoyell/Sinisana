@@ -86,18 +86,18 @@ const InteractiveCarousel = () => {
       opts={{
         align: "start",
       }}
-      className=" max-w-sm lg:max-w-[1140px] md:max-w-[800px] lg:ml-0 md:ml-0 ml-6  "
+      className=" max-w-full lg:max-w-[1140px] md:max-w-[800px]  mb-20 "
     >
       <CarouselContent>
         {cardTestimonial.map((item, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
             <div className="p-1 flex justify-center items-center h-full">
-              <Card className="lg:w-[370px] group md:w-[370px] md:h-[419px] lg:h-[419px] items-center justify-center border-0 shadow-none border-t-8  bg-cardbg hover:scale-105 transform transition-transform duration-200 ">
+              <Card className="lg:w-[370px] group md:w-[370px] w-full md:h-[419px] lg:h-[419px] items-center justify-center border-0 shadow-none border-t-8  bg-cardbg hover:scale-105 transform transition-transform duration-200 ">
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <div className="items-center flex flex-col justify-center ">
                     <div className="items-center flex flex-col justify-center pb-40 group-hover:pb-[159px] bg-white w-[370px] mt-[-24px]">
                       <img src="/semicolIcon.svg" className="mt-10" />
-                      <p className="mt-4 justify-center self-center px-9">
+                      <p className="mt-4 text-center text-xs lg:px-9 md:px-9 lg:text-base md:text-base px-20">
                         {item.comment}
                       </p>
                     </div>
