@@ -1,5 +1,4 @@
 ---
-// Navbar.astro
 const menuItems = [
   { name: 'Home', href: '/' },
   { name: 'Solutions', href: '/solutions' },
@@ -7,9 +6,12 @@ const menuItems = [
   { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' }
 ];
+
+// Get the current pathname
+const { pathname } = new URL(Astro.request.url);
 ---
 
-<nav class="lg:bg-white border-b border-gray-300 ml-5 lg:ml-0 md:ml-0 w-full">
+<nav class="lg:bg-white border-b border-gray-300 ml-5 lg:ml-0 md:ml-0 w-full font-header font-medium">
   <div class="container mx-auto flex items-center justify-between py-4">
     <div class="flex items-center">
       <img src="/sinisana-logo.svg" alt="Sinisana Logo" class="h-8 mr-2" />
@@ -23,14 +25,22 @@ const menuItems = [
     </div>
     <ul class="hidden lg:flex lg:space-x-12 space-x-1">
       {menuItems.map(item => (
-        <li><a href={item.href} class="text-gray-700 hover:text-primarylogoColor hover:underline underline-offset-8">{item.name}</a></li>
+        <li>
+          <a href={item.href} class={`text-gray-700 hover:text-primarylogoColor hover:underline hover:font-semibold underline-offset-8 ${pathname === item.href ? 'text-primarylogoColor font-semibold underline' : ''}`}>
+            {item.name}
+          </a>
+        </li>
       ))}
     </ul>
   </div>
-  <div id="mobile-menu" class="lg:hidden hidden ">
+  <div id="mobile-menu" class="lg:hidden hidden">
     <ul class="space-y-2 px-4 py-2">
       {menuItems.map(item => (
-        <li><a href={item.href} class="block text-gray-700 hover:text-primarylogoColor">{item.name}</a></li>
+        <li>
+          <a href={item.href} class={`block text-gray-700 hover:text-primarylogoColor hover:font-semibold ${pathname === item.href ? 'text-primarylogoColor font-semibold' : ''}`}>
+            {item.name}
+          </a>
+        </li>
       ))}
     </ul>
   </div>

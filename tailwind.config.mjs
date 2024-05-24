@@ -15,7 +15,10 @@ module.exports = {
       screens: {
         "ipad-pro": { raw: "(min-width: 834px) and (max-width: 1366px)" },
       },
-      fontFamily: {},
+      fontFamily: {
+        header: ["Enriqueta", "serif"],
+        content: ["Ubuntu", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
