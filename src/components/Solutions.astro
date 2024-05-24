@@ -30,7 +30,7 @@ const solutionBlock = [
 <section class="relative text-black lg:py-40 md:py-60 py-20 mb-10 items-center justify-center w-full h-full lg:w-full md:w-full md:h-full">    
   <div class="absolute inset-0 overflow-hidden flex items-center w-full px-2 h-full lg:w-full md:w-full md:h-full justify-center">
       <img
-        class="w-full h-full lg:w-full md:w-full md:h-full object-cover self-center opacity-85"
+        class="w-full h-full lg:w-full md:w-full md:h-full object-cover self-center  gradient-mask-t"
         src="/images/solution-hero-section-bgimg.svg"
       />
       <div class="absolute inset-0 bg-black opacity-0"></div> <!-- Adds a dark overlay for better text visibility -->
@@ -46,7 +46,7 @@ const solutionBlock = [
     <div class="absolute lg:bottom-[-40px] md:bottom-[-20px] ipad-pro:bottom-[-40px] bottom-[-20px] left-0 right-0 items-center flex justify-center space-x-1 lg:space-x-5 md:space-x-4 ">
       {solutionBlock.map((block)=>(
       <a href={block.link}>
-        <Button className="lg:w-72 md:w-44  ipad-pro:w-52 md:h-[80px] lg:h-[90px] lg:px-10 w-20 h-auto self-center shadow-slate-400 lg:space-x-2 md:space-x-2 ipad-pro:space-x-2 space-x-0 bg-white text-black rounded-none border shadow-md  hover:text-black hover:border-2 hover:border-gray-500 hover:bg-white hover:scale-105 duration-300 transition-transform">
+        <Button className="lg:w-72 md:w-44  ipad-pro:w-52 md:h-[80px] lg:h-[90px] lg:px-10 w-20 h-auto self-center shadow-slate-400 lg:space-x-2 md:space-x-2 ipad-pro:space-x-2 space-x-0 bg-white text-black rounded-none border shadow-md  hover:text-black hover:border-2 hover:shadow-lg hover:shadow-slate-500 hover:bg-white hover:scale-105 duration-300 transition-transform">
          <img src={block.icon} class="ipad-pro:w-24 lg:w-14 w-3 md:w-5" />
          <h1 class="lg:text-xl ipad-pro:text-base md:text-base text-[7px]  ">
          {block.name}
@@ -152,12 +152,32 @@ const solutionBlock = [
               <img src="/images/solution-Hala-photo2.svg" alt="Farm" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
             </div>
           </div>
+  
         </section>
+
+        <div class="lg:space-y-2 md:space-y-2 p-8 mb-10">
+          <div class=" flex flex-col lg:flex-row md:flex-row lg:space-x-7 md:space-x-7">
+            <div class="lg:w-[340px] md:w-[340px] w-full lg:my-0 md:my-0 my-4">
+              <h1 class="text-2xl lg:text-4xl  font-bold mb-4">Problem Statement</h1>
+              <p class="text-base lg:text-xl text-justify font-normal">Sara-Bif, owned by PPES Ternak Sdn. Bhd., is a vertically-integrated beef producer with farms and abattoirs. They've expanded to large-scale farms in Australia and modern halal facilities in Sarawak, ensuring for high-quality beef domestic and export markets.</p>
+            </div>
+            <img class="w-auto h-auto"  src="/images/solution-halaBeef-problemStatement.svg"/>
+          </div>
+          <div class=" flex flex-col lg:flex-row md:flex-row lg:space-x-7 md:space-x-7">
+            <img class="w-auto h-auto hidden lg:block md:block mt-10"  src="/images/solution-halaBeef-problemSolution.svg"/>
+            <div class="lg:w-[340px] md:w-[340px] w-full lg:my-0 md:my-0 my-4">
+              <h1 class="text-2xl lg:text-4xl  font-bold mb-4">Our Solution</h1>
+              <p class="text-base lg:text-xl text-justify font-normal"> Using Sinisana Intersect, we developed
+                 web and mobile applications for Sara-Bif's supply chain, enabling data contribution from farms, 
+                 abattoirs, and retail outlets. 
+                Our solution includes tagging each cattle and beef cut for data integrity.</p>
+            </div>
+            <img class="w-auto h-auto lg:hidden md:hidden"  src="/images/solution-halaBeef-problemSolution.svg"/>
+          </div>
+        </div>
         
 
-        
-
-
+  
 
   </section>
 
