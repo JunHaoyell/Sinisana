@@ -86,13 +86,13 @@ const InteractiveCarousel = () => {
       opts={{
         align: "start",
       }}
-      className=" max-w-[300px] lg:max-w-[1140px] md:max-w-[800px]  mb-20 "
+      className=" max-w-[300px] lg:max-w-[1140px] md:max-w-[800px] mb-20 "
     >
       <CarouselContent>
         {cardTestimonial.map((item, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
             <div className="p-1 flex justify-center items-center h-full">
-              <Card className="lg:w-[370px] group md:w-[370px] w-full md:h-[419px] lg:h-[419px] items-center justify-center border-0 shadow-none border-t-8  bg-cardbg hover:scale-105 transform transition-transform duration-200 ">
+              <Card className="lg:w-[370px] group md:w-[370px] w-full md:h-[419px] lg:h-[419px] items-center justify-center border-0 shadow-none border-t-8  bg-cardbg hover:scale-105 transform transition-transform duration-300 ">
                 <CardContent className="flex aspect-square items-center justify-center">
                   <div className="items-center flex flex-col justify-center ">
                     <div className="items-center flex flex-col justify-center pb-40 group-hover:pb-[159px] bg-white w-[370px] mt-[-24px]">
