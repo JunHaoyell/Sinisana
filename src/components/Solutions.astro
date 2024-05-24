@@ -46,7 +46,7 @@ const solutionBlock = [
     <div class="absolute lg:bottom-[-40px] md:bottom-[-20px] ipad-pro:bottom-[-40px] bottom-[-20px] left-0 right-0 items-center flex justify-center space-x-1 lg:space-x-5 md:space-x-4 ">
       {solutionBlock.map((block)=>(
       <a href={block.link}>
-        <Button className="lg:w-72 md:w-44  ipad-pro:w-52 md:h-[80px] lg:h-[90px] lg:px-10 w-20 h-auto self-center shadow-slate-400 lg:space-x-2 md:space-x-2 ipad-pro:space-x-2 space-x-0 bg-white text-black rounded-none border shadow-md  hover:text-black hover:bg-white hover:scale-105">
+        <Button className="lg:w-72 md:w-44  ipad-pro:w-52 md:h-[80px] lg:h-[90px] lg:px-10 w-20 h-auto self-center shadow-slate-400 lg:space-x-2 md:space-x-2 ipad-pro:space-x-2 space-x-0 bg-white text-black rounded-none border shadow-md  hover:text-black hover:border-2 hover:border-gray-500 hover:bg-white hover:scale-105 duration-300 transition-transform">
          <img src={block.icon} class="ipad-pro:w-24 lg:w-14 w-3 md:w-5" />
          <h1 class="lg:text-xl ipad-pro:text-base md:text-base text-[7px]  ">
          {block.name}
@@ -77,21 +77,85 @@ const solutionBlock = [
             9 in 10 consumers globally rate ingredient traceability as important or very important. It has become a key non-price purchase trigger that every brand must embrace. Learn more from our case studies showcasing how we are helping organizations meet this growing demand.
           </p>
         </div>
-
-        <section class="flex flex-col md:flex-row items-center p-8 lg:px-36 bg-light">
+          <!--- Food security section -->
+        <section class="flex flex-col md:flex-row items-center p-8 lg:my-10 md:my-10 my-2 lg:px-36 bg-light" id="foodsecurity">
           <div class="md:w-1/2 lg:w-1/3 ipad-pro:w-1/2 w-full md:pr-8">
             <h2 class="text-2xl lg:text-4xl  font-bold mb-4">Ensuring Food Safety and Quality</h2>
             <p class="text-base lg:text-xl font-normal">At Sinisana Technologies, we understand the critical importance of maintaining food security in today's global supply chains. Our advanced solutions are designed to monitor and safeguard food quality from production to consumption.</p>
           </div>
           <div class="md:w-1/2 lg:w-2/3 w-full ipad-pro:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mt-8   md:mt-0">
             <div class="flex-1">
-              <img src="/images/inspectingfood.svg" alt="Inspecting food" class="relative w-full lg:w-96 h-auto md:ml-24 lg:ml-24 lg:mt-14 md:mt-10 mt-0 object-cover rounded-md shadow-md">
+              <img src="/images/inspectingfood.svg" alt="Inspecting food" class="relative w-full hover:scale-105 transition-transform transform duration-300 lg:w-96 h-auto md:ml-24 lg:ml-24 lg:mt-14 md:mt-10 mt-0 object-cover rounded-md shadow-md">
             </div>
             <div class="flex-1">
-              <img src="/images/farm.svg" alt="Farm" class="w-full lg:w-[500px] h-auto object-cover rounded-md shadow-md">
+              <img src="/images/farm.svg" alt="Farm" class="w-full lg:w-[500px] hover:scale-105 duration-300 transition-transform  h-auto object-cover rounded-md shadow-md">
             </div>
           </div>
         </section>
+          <!--- ESG compliance section -->
+        <section class="flex flex-col md:flex-row items-center p-8 lg:px-36 lg:my-10 md:my-10 my-2 bg-light" id="esg-compliance">
+          <div class="md:w-1/2 lg:w-1/2 w-full ipad-pro:w-1/2  flex-wrap md:flex-nowrap gap-4 md:mt-0 lg:mr hidden lg:flex md:flex">
+            <div class="lg:flex-auto  flex-1 lg:ml">
+              <img src="/images/solution-ESG-photo1.svg" alt="Inspecting food" class="w-full  hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+            <div class="lg:flex-auto flex-1 lg:mr- md:mr-20">
+              <img src="/images/solution-ESG-photo2.svg" alt="Farm" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+          </div>
+          <div class="md:w-1/2 lg:w-1/2 ipad-pro:w-1/2 w-full md:pr-8">
+            <h2 class="text-2xl lg:text-4xl font-bold mb-4">Committed to Environmental, Social, and Governance Standards</h2>
+            <p class="text-base lg:text-xl font-normal lg:pr-">Our ESG Compliance solutions help businesses navigate the complex landscape of environmental, social, and governance regulations. We offer tools and services that enable companies to measure, manage, and report their ESG performance.</p>
+          </div>
+          <div class="md:w-1/2 lg:w-1/2 mt-10 w-full ipad-pro:w-1/2 flex flex-wrap md:flex-nowrap gap-4 md:mt-0 lg:mr lg:hidden md:hidden">
+            <div class="lg:flex-auto flex-1 lg:ml">
+              <img src="/images/solution-ESG-photo1.svg" alt="Inspecting food" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+            <div class="lg:flex-auto flex-1 lg:mr-40">
+              <img src="/images/solution-ESG-photo2.svg" alt="Farm" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+          </div>
+        </section>
+            <!--- Life cycle tracking section -->
+        <section class="flex flex-col md:flex-row items-center p-8 lg:px-36 lg:my-10 md:my-10 my-2 bg-light" id="life-cycle-tracking">
+          <div class="md:w-1/2 lg:w-1/3 ipad-pro:w-1/2 w-full md:pr-8">
+            <h2 class="text-2xl lg:text-4xl  font-bold mb-4">Lifecycle Tracking</h2>
+            <p class="text-base lg:text-xl font-normal">Sinisana Technologies offers robust lifecycle tracking solutions for complete product visibility from creation to disposal. Our innovative allows businesses to monitor every stage, optimize processes, reduce waste, and ensure regulatory compliance.</p>
+          </div>
+          <div class="md:w-1/2 lg:w-2/3 w-full ipad-pro:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mt-8   md:mt-0">
+            <div class="flex-1">
+              <img src="/images/solution-lifecycleTracking-photo1.svg" alt="Inspecting food" class="relative w-full hover:scale-105 transition-transform transform duration-300 lg:w-96 h-auto md:ml-24 lg:ml-24 lg:mt-14 md:mt-10 mt-0 object-cover rounded-md shadow-md">
+            </div>
+            <div class="flex-1">
+              <img src="/images/solution-lifecycleTracking-photo2.svg" alt="Farm" class="w-full lg:w-[500px] hover:scale-105 duration-300 transition-transform  h-auto object-cover rounded-md shadow-md">
+            </div>
+          </div>
+        </section>
+          <!--- Halal Beef section -->
+        <section class="flex flex-col md:flex-row items-center p-8 lg:px-36 lg:my-10 md:my-10 my-2 bg-light" id="halal-beef">
+          <div class="md:w-1/2 lg:w-1/2 w-full ipad-pro:w-1/2  flex-wrap md:flex-nowrap gap-4 md:mt-0 lg:mr hidden lg:flex md:flex">
+            <div class="lg:flex-auto  flex-1 lg:ml">
+              <img src="/images/solution-Hala-photo1.svg" alt="Inspecting food" class="w-full  hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+            <div class="lg:flex-auto flex-1 lg:mr- md:mr-20">
+              <img src="/images/solution-Hala-photo2.svg" alt="Farm" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+          </div>
+          <div class="md:w-1/2 lg:w-1/2 ipad-pro:w-1/2 w-full md:pr-8">
+            <h2 class="text-2xl lg:text-4xl font-bold mb-4">Halal Beef</h2>
+            <p class="text-base lg:text-xl font-normal lg:pr-">Our ESG Compliance solutions help businesses navigate the complex landscape of environmental, social, and governance regulations. We offer tools and services that enable companies to measure, manage, and report their ESG performance</p>
+          </div>
+          <div class="md:w-1/2 lg:w-1/2 w-full mt-10 ipad-pro:w-1/2 flex flex-wrap md:flex-nowrap gap-4 md:mt-0 lg:mr lg:hidden md:hidden">
+            <div class="lg:flex-auto flex-1 lg:ml">
+              <img src="/images/solution-Hala-photo1.svg" alt="Inspecting food" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+            <div class="lg:flex-auto flex-1 lg:mr-40">
+              <img src="/images/solution-Hala-photo2.svg" alt="Farm" class="w-full hover:scale-105 transform transition-transform duration-300 lg:h-[417px]">
+            </div>
+          </div>
+        </section>
+        
+
+        
 
 
 
