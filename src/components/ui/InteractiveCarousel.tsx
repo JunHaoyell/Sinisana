@@ -33,7 +33,7 @@ const InteractiveCarousel = () => {
     {
       name: "Michael Johnson",
       description: "Investor",
-      image: "/person1.svg",
+      image: "/farm.svg",
       comment:
         "Nisl rhoncus mattis rhoncus urna neque viverra. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.",
     },
@@ -105,11 +105,18 @@ const InteractiveCarousel = () => {
                       </p>
                     </div>
                     <img src="/rating.svg" className="mt-[-80px]" />
-                    <img
+                    {/* <img
                       src={`/images/${item.image}`}
                       alt={item.name}
                       className="mt-5"
-                    />
+                    /> */}
+                    <div className="w-[67.08px] h-[73px] overflow-hidden rounded-full mt-5">
+                      <img
+                        src={`/images/${item.image}`}
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <h2 className="text-xl font-semibold ">{item.name}</h2>
                     <p className="text-gray-500">{item.description}</p>
                   </div>
