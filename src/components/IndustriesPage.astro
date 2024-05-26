@@ -45,7 +45,7 @@ const ServiceIndustries = [
 <section class=" flex justify-center items-center lg:my-5">
 
   <div class="grid lg:grid-cols-2 md:grid-cols-2 p-8">
-    <div class="lg:w-[430px] w-full lg:pt-20 md:pt-14">
+    <div class="lg:w-[430px] w-full lg:pt-20 md:pt-14 md:pr-3">
       <h1 class="text-2xl lg:text-5xl font-header font-bold mb-4 tracking-wider">Industries We Serve</h1>
               <p class="text-base lg:text-lg  font-normal"> Our specialized solutions cater to 
                 a range of industries, addressing unique challenges and enhancing operational 
@@ -84,17 +84,17 @@ const ServiceIndustries = [
 
 </section>
 
-<section class="lg:px-60 pt-10 p-10" style="background-image: url('/industries/Industries-service-bgImg.svg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+<section class="lg:px-60 ipad-pro:px-20 md:px-10 pt-10 p-10" style="background-image: url('/industries/Industries-service-bgImg.svg');background-size: cover; background-position: center; background-repeat: no-repeat;">
   
   <p class="text-primarylogoColor text-left font-bold pb-2 "> SERVICES</p>
   <h1 class="lg:text-5xl md:text-3xl text-2xl font-bold pb-4 font-header tracking-wider lg:pr-80 lg:leading-relaxed ">Explore Our Tailored Industries</h1>
 
-  <div class="grid lg:grid-cols-3 mt-4">
+  <div class="grid lg:grid-cols-3 md:grid-cols-3 mt-4">
 
     {ServiceIndustries.map((data) =>(
-      <div class="lg:w-[260px] mb-20">
+      <div class="lg:w-[260px] md:w-[220px] md:h-auto mb-20">
         <img src={data.icon} class="w-14" />
-        <h1 class="lg:text-3xl md:text-3xl text-2xl font-bold pb-4 font-header text-primarylogoColor mt-2 ">{data.title}</h1>
+        <h1 class="lg:text-3xl md:text-2xl text-2xl font-bold pb-4 font-header text-primarylogoColor mt-2 ">{data.title}</h1>
         <p>{data.detail}</p>
         <a href="/contact" class="font-header text- font-semibold flex text-primarylogoColor mt-3 ">
           More Detail  <img src="/industries/arrowIcon.svg" class="w-8 ml-2"/>
