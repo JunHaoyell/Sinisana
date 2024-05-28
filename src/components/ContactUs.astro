@@ -1,5 +1,10 @@
 ---
 
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import ContactForm from "./ContactForm.jsx"
+
+
 ---
 
 <section class="relative text-black lg:py-40 md:py-60 py-20 mb-10 items-center justify-center w-full h-full lg:w-full md:w-full md:h-full">    
@@ -50,41 +55,8 @@
       
         <!-- Contact Form -->
         <div class="w-full md:w-1/2 bg-white lg:p-8 md:p-8 p-2 lg:w-[531px] rounded-tr-2xl rounded-br-2xl font-header">
-          <form action="#" method="POST" class="space-y-8 p-10">
-            <div class="space-y-2">
-              <label for="name" class="block font-semibold text-xl">Full Name</label>
-              <input type="text" id="name" name="name" class="w-full p-4 border-none placeholder-red bg-gray-100 rounded " placeholder="Full Name *" required>
-            </div>
-            <div class="space-y-2">
-              <label for="email" class="block font-semibold text-xl">Email</label>
-              <input type="email" id="email" name="email" class="w-full p-4 border-none placeholder-red bg-gray-100 rounded" placeholder="Email address *" required>
-            </div>
-            <div class="space-y-2">
-              <label for="company" class="block font-semibold text-xl">Company Name (Optional)</label>
-              <input type="text" id="company" name="company" class="w-full p-4 border-none placeholder-red bg-gray-100 rounded" placeholder="Your company name ">
-            </div>
-            <div class="space-y-2">
-              <label for="industry" class="block font-semibold text-xl">Industries</label>
-              <select id="industry" name="industry" class="w-full p-4 border-none placeholder-red bg-gray-100 rounded" required>
-                <option value="Food Manufacturing">Food Manufacturing</option>
-                <option value="Halal Production">Halal Production</option>
-                <option value="Aquaculture">Aquaculture</option>
-                <option value="Agriculture">Agriculture</option>
-                <option value="Plantations">Plantations</option>
-                <option value="Labor-Intensive Manufacturing">Labor-Intensive Manufacturing</option>
-                <option value="Others">Others...</option>
-
-                <!-- Add more options as needed -->
-              </select>
-            </div>
-            <div class="space-y-2">
-              <label for="comments" class="block font-semibold text-xl">Comments</label>
-              <textarea id="comments" name="comments" class="w-full p-4 border-none placeholder-red bg-gray-100 rounded" rows="4" placeholder="Your comments " />
-            </div>
-            <div class="text-right">
-                <button type="submit" class="bg-primarylogoColor hover:bg-white hover:text-primarylogoColor hover:border-primarylogoColor hover:border text-white px-4 py-2 rounded ">Send Message</button>
-            </div>
-          </form>
+          
+          <ContactForm />
         </div>
       </section>
      
