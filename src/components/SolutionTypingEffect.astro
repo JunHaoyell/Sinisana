@@ -1,0 +1,66 @@
+<astro>
+    <!-- Define the styles -->
+    <style>
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: #9F1C2D; }
+      }
+  
+      .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .15em solid #9F1C2D;
+        animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+      }
+    </style>
+  
+    <!-- Define the HTML structure -->
+    <h1 class="lg:text-6xl md:text-5xl lg:px-40 text-4xl font-bold text-black text-center self-center font-header justify-center lg:mb-7 md:mb-7">
+        Revolutionize Your Industry with <br><span id="dynamic-text" class="typing text-primarylogoColor"></span>
+    </h1>
+  
+    <!-- Load dynamic data -->
+    <script>
+      const texts: string[] = ["Food Security", "ESG Compliance", "Lifecycle Tracking", "Halal Beef"];
+      let index: number = 0;
+      let textIndex: number = 0;
+      let typingTimer: ReturnType<typeof setTimeout>;
+  
+      function typeText(): void {
+        const dynamicText: HTMLElement | null = document.getElementById('dynamic-text');
+        if (dynamicText) {
+          if (textIndex < texts[index].length) {
+            dynamicText.textContent += texts[index][textIndex];
+            textIndex++;
+            typingTimer = setTimeout(typeText, 100); // Typing speed
+          } else {
+            clearTimeout(typingTimer);
+            setTimeout(eraseText, 1000); // Delay before erasing
+          }
+        }
+      }
+  
+      function eraseText(): void {
+        const dynamicText: HTMLElement | null = document.getElementById('dynamic-text');
+        if (dynamicText) {
+          if (dynamicText.textContent && dynamicText.textContent.length > 0) {
+            dynamicText.textContent = dynamicText.textContent.slice(0, -1);
+            typingTimer = setTimeout(eraseText, 50); // Erasing speed
+          } else {
+            clearTimeout(typingTimer);
+            index = (index + 1) % texts.length;
+            textIndex = 0;
+            setTimeout(typeText, 500); // Delay before typing next word
+          }
+        }
+      }
+  
+      typeText(); // Start typing animation
+    </script>
+  </astro>
+  

@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "@components/ui/card";
 import { Accordion } from "@components/ui/Accordon"
-import InteractiveCarousel from "@components/ui/InteractiveCarousel"
 
 import TypingEffect from "@components/TypingEffect.astro";
 import ClientTestimonial from "@components/ClientTestimonial.astro"
@@ -48,11 +47,10 @@ const accordionData = [
     <TypingEffect />
     <h1 class="lg:text-5xl md:text-3xl text-2xl font-bold font-header text-black lg:px-0 self-center justify-center lg:mb-7 md:mb-7">
         in Your Supply Chain</h1>
-    <p class="mt-6 lg:text-lg md:text-lg text-sm text-center text-white lg:mb-7 md:mb-7">
-      Leveraging Blockchain Technology for Food Security, Compliance, and Sustainability
-    </p>
+    <p class="mt-6 lg:text-xl lg:px-40 md:text-lg text-sm text-center text-white lg:mb-7 md:mb-7">
+      At Sinisana Technologies, we enhance supply chain transparency and efficiency, ensuring food safety and regulatory compliance for a sustainable future    </p>
     <a href="#learnmore">
-      <Button className="bg-primarylogoColor mt-6 text-white py-2 px-4 rounded" >Learn More</Button>
+      <Button className="bg-primarylogoColor mt-6 hover:bg-white hover:text-primarylogoColor hover:border-primarylogoColor hover:border text-white py-2 px-4 rounded" >Learn More</Button>
     </a>
   </div>
 </section>
@@ -106,17 +104,17 @@ const accordionData = [
 
   <section class=" flex container  flex-col items-center justify-center lg:mt-10 lg:mb-20 mb-[-150px] lg:px-32 w-full lg:w-full md:w-full">
     <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">
-      <div class="col-span-1 lg:w-[535px] lg:h-[417px] w-auto h-auto">
+      <div class="col-span-1 lg:w-[535px] ipad-pro:w-[500px] lg:h-[417px] w-auto h-auto">
         <p class="text-primarylogoColor font-bold pb-2"> WHY US</p>
         <h1 class="text-4xl font-header font-bold"> Leading the Way in Supply Chain Transparency</h1>
         <p class="pr-28 mt-6">Our innovative solutions have been transforming the supply chain industry for over a decade. Here's why businesses trust us:</p>
         <Accordion data={accordionData} client:idle />
       </div>
-      <div class="col-span-1 w-auto h-auto hidden lg:block">
-          <img src="/images/benefit1.svg" class="lg:w-[175px] w-auto h-auto lg:h-[417px] lg:ml-72  " />
+      <div class="col-span-1 w-auto h-auto hidden  lg:block ipad-pro:mt-16">
+          <img src="/images/benefit1.svg" class="lg:w-[175px] ipad-pro:w-auto w-auto h-auto lg:h-[417px] ipad-pro:h-[360px] lg:ml-72 ipad-pro:ml-48  " />
       </div>
-      <div class="col-span-1 w-auto h-auto lg:mt-0 lg:ml-0 hidden lg:block"> 
-        <img src="/images/benefit2.svg"  class="lg:w-[278px] w-auto h-[250px] lg:h-[417px] lg:ml-24"/>
+      <div class="col-span-1 w-auto h-auto lg:mt-0 lg:ml-0  hidden lg:block"> 
+        <img src="/images/benefit2.svg"  class="lg:w-[278px] w-auto h-[250px] ipad-pro:w-[175px] lg:h-[417px] ipad-pro:h-[400px] lg:ml-24 ipad-pro:ml-28"/>
       </div>
 
       <div class="grid grid-cols-2 lg:hidden mb-36 px-5">
@@ -127,6 +125,8 @@ const accordionData = [
         <img src="/images/benefit2.svg"  class=" w-auto h-auto"/>
       </div>
       </div>
+
+      
   </div>
   </section> 
   
